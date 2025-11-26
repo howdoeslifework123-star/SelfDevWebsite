@@ -123,7 +123,7 @@ header nav ul li a:hover {
 
 
 .hero {
-  padding: 140px 50px;
+  padding: 10vh 5%;
   text-align: center;
   background: linear-gradient(
       rgba(0,0,0,0.8),
@@ -137,13 +137,13 @@ header nav ul li a:hover {
 }
 
 .hero h1 {
-  font-size: 60px;
+  font-size: 8vw;
   color: var(--aqua);
   text-shadow: 0 0 20px var(--aqua), 0 0 40px var(--aqua);
 }
 
 .hero p {
-  font-size: 20px;
+  font-size: 3vw;
   margin-top: 20px;
   color: var(--yellow);
   text-shadow: 0 0 10px var(--yellow);
@@ -206,18 +206,18 @@ header nav ul li a:hover {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);   
-  gap: 40px;
-  max-width: 1100px;                       
-  margin: 0 auto;                          
-  justify-items: center;                   
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  justify-items: center;                  
 }
 
 
 .card {
   background: rgba(255, 255, 255, 0.05);
   border: 2px solid var(--burgundy);
-  padding: 30px;
+  padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 15px var(--burgundy);
   transition: 0.3s;
@@ -272,6 +272,52 @@ footer {
   position: relative;
   z-index: 1001;
 }
+  @media (max-width: 1024px) {
+  header {
+    padding: 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero {
+    padding: 15vh 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 10vw;
+  }
+
+  .hero p {
+    font-size: 4vw;
+  }
+
+  .cards {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  header nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero h1 {
+    font-size: 12vw;
+  }
+
+  .hero p {
+    font-size: 5vw;
+  }
+
+  .hero button {
+    padding: 12px 30px;
+    font-size: 4vw;
+  }
+}
+
 
 </style>
 </head>
